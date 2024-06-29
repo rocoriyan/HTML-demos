@@ -26,7 +26,7 @@
         &lt;p&gt;No hover&lt;/p&gt;
     &lt;/div&gt;
     &lt;script&gt;
-        const imageContainer = document.getElementById(&quot;image-container&quot;);
+        const imageContainer = document.querySelector(&quot;#image-container&quot;);
 
         imageContainer.addEventListener('mouseover', () =&gt; {
             document.querySelector(&quot;#image-container img&quot;).src = &quot;media/Glenn-2.png&quot;;
@@ -41,7 +41,7 @@
     &lt;/body&gt;
 &lt;/html&gt;</pre>
     <p><code>mouseover</code> is used to change the image when a mouse is hovering over the image, while <code>mouseout</code> is used to change the image back when the mouse stops hovering.</p>
-    <p>querySelector() and getElementById() are very similar methods. I've used <code>document.getElementById</code> to select the <code>image-container</code> div as that's its ID and it's preferred as it's a bit faster than <code>document.querySelector</code>. However, <code>document.querySelector</code> lets you to select elements using CSS selectors, allowing me to select the image and paragraph tag inside the <code>image-container</code> div, despite them not having IDs.</p>
+    <p>querySelector() and getElementById() are very similar methods. I've used <code>document.querySelector</code> here as it lets you to select elements using CSS selectors, allowing me to select the image and paragraph tag inside the <code>image-container</code> div, despite them not having their own IDs. <code>getElementById</code> is generally preferred, though, as it's faster, and you can only select one element anyway so class usage can be messy. If multiple elements meet match the CSS query used for <code>document.querySelector</code>, only the first one will be changed</p>
     <p>You might want to do more reading into <a href="https://www.freecodecamp.org/news/dom-manipulation-in-javascript/">DOM manipulation</a> to see what works best for you. If you want to see what else can be done with DOM manipulation, I have a <a href="https://rocoriyan.github.io/CdNtnWeek3/">different website</a> showing off the some examples.</p>
 	<script src="index.js"></script>
   </body>
