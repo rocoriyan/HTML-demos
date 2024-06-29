@@ -1,5 +1,6 @@
 html{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow-x: hidden;
 }
 
 .image-container{
@@ -23,3 +24,14 @@ pre{
     padding:10px;
     width: max-content;
 }
+
+@media only screen and (max-width: 630px) {
+    .image-container{
+        width: 93%;
+    }
+    pre{
+        width:93%;
+        overflow-x: scroll;
+        padding-bottom: 20px;
+    }
+  }
