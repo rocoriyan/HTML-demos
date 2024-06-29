@@ -8,3 +8,14 @@
 .image-container img{
     max-width: 100%;
 }
+
+code, pre{
+    background-color: #eaecf0;
+    border: 1px #c8ccd1 solid;
+    padding: 0.5px;
+}
+
+pre{
+    padding:10px;
+    width: max-content;
+}
