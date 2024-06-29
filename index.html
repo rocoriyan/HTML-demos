@@ -26,15 +26,15 @@
         &lt;p&gt;No hover&lt;/p&gt;
     &lt;/div&gt;
     &lt;script&gt;
-        const imageContainer = document.querySelector(&quot;#image-container img&quot;);
+        const imageToChange = document.querySelector(&quot;#image-container img&quot;);
 
-        imageContainer.addEventListener('mouseover', () =&gt; {
-            document.querySelector(&quot;#image-container img&quot;).src = &quot;media/Glenn-2.png&quot;;
+        imageToChange.addEventListener('mouseover', () =&gt; {
+            imageToChange.src = &quot;media/Glenn-2.png&quot;;
             document.querySelector(&quot;#image-container p&quot;).innerText = &quot;Hover&quot;;
         });
 
-        imageContainer.addEventListener('mouseout', () =&gt; {
-            document.querySelector(&quot;#image-container img&quot;).src = &quot;media/Glenn-1.png&quot;;
+        imageToChange.addEventListener('mouseout', () =&gt; {
+            imageToChange.src = &quot;media/Glenn-1.png&quot;;
             document.querySelector(&quot;#image-container p&quot;).innerText = &quot;No hover&quot;;
         })
     &lt;/script&gt;
