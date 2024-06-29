@@ -16,6 +16,33 @@
         <img src="media/Glenn-1.png"/>
         <p>No hover</p>
     </div>
+    <p>The code for this looks like this:</p>
+    <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang=&quot;en&quot;&gt;
+          &lt;body&gt;
+            &lt;div class=&quot;domedit image-container&quot;&gt;
+                &lt;img src=&quot;media/Glenn-1.png&quot;/&gt;
+                &lt;p&gt;No hover&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;script&gt;
+                const domDiv = document.querySelector(&quot;.domedit&quot;);
+        
+                domDiv.addEventListener('mouseover', () =&gt; {
+                    document.querySelector(&quot;.domedit img&quot;).src = &quot;media/Glenn-2.png&quot;;
+                    document.querySelector(&quot;.domedit p&quot;).innerText = &quot;Hover&quot;;
+                });
+        
+                domDiv.addEventListener('mouseout', () =&gt; {
+                    document.querySelector(&quot;.domedit img&quot;).src = &quot;media/Glenn-1.png&quot;;
+                    document.querySelector(&quot;.domedit p&quot;).innerText = &quot;No hover&quot;;
+                })
+            &lt;/script&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+    </pre>
+    <p>I've used <code>document.querySelector</code> here as I wanted to manipulate both the contents of the paragraph and the image's source. <code>document.getElementsByTagName</code> is much faster, though it doesn't let you select elements by class.</p>
+    <p>You might want to do more reading into <a href="https://www.freecodecamp.org/news/dom-manipulation-in-javascript/">DOM manipulation</a> to see what works best for you. If you want to see what else can be done with DOM manipulation, I have a <a href="https://rocoriyan.github.io/CdNtnWeek3/">different website</a> showing off the some examples.</p>
 	<script src="index.js"></script>
   </body>
 </html>
