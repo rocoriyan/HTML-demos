@@ -1,0 +1,10 @@
+.image-container{
+    border:2px black dashed;
+    border-radius: 5px;
+    width:400px;
+    padding: 10px;
+}
+
+.image-container img{
+    max-width: 100%;
+}
